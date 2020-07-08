@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;900&family=Oswald&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    display: grid;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    border-bottom: solid 2px  #c7c7c7;
+}
+
+header .nav {
+    padding: 10px;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+header .nav h1 {
+    font-family: 'Oswald', sans-serif;
+    margin: 0;
+    padding: 0 10px;
+    border: solid 2px #000;
+}
+
+header .nav i {
+    font-size: 25px;
+    cursor: pointer;
+}
+
+header .nav>span {
+    width: 24px;
+    height: 20px;
+    background-color: #01fa92;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: -8px;
+    bottom: 18px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+.container, .top, .modal, footer {
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.top {
+    width: 80%;
+    margin: 20px 0;
+    justify-self: center;
+    font-weight: lighter !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.top span {
+    font-size: 30px;
+}
+
+.top .dropbtn {
+    width: 160px;
+    padding: 10px;
+    background-color: #fff;
+    font-size: 16px;
+    border: solid 1px #000;
+    cursor: pointer;
+    outline: none;
+}
+
+.top .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.top .dropdown-content {
+    min-width: 160px;
+    background-color: #fff;
+    border: solid 1px #000;
+    border-top: 0;
+    position: absolute;
+    display: none;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.top .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.top .dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+
+.top .dropdown:hover .dropdown-content {
+    display: block;
+}
+.top .dropdown-content .checked{
+    background-color: #01fa92 !important;
+}
+
+.container {
+    width: 80%;
+    align-self: center;
+    display: grid;
+    grid-template-columns: 180px auto;
+}
+
+.container .filter .options:nth-child(2) {
+    margin: 40px 0;
+}
+
+.container .filter .options .opt-title {
+    margin-bottom: 50px; /*não funciona*/
+}
+.container .filter .options .checkbox {
+    width: 13px;
+    height: 13px;
+    border: solid 1px #000;
+    margin-right: 5px;
+}
+.container .filter .colors .checked, 
+.container .filter .prices .checked {
+    padding: 3px;
+    background-color: #01fa92;
+}
+
+.container .filter .options>div {
+    display: flex;
+    align-items: center;
+}
+
+.container .filter .colors {
+    height: 170px;
+    overflow: hidden;
+}
+
+.container .filter .colors #more_colors {
+    color: #00000060;
+    border-bottom: solid 1px #00000060;
+    cursor: pointer;
+}
+
+.container .filter .sizes .sizes-display {
+    display: grid;
+    grid-template-columns: repeat(4, 40px);
+    row-gap: 10px;
+}
+.container .filter .sizes .sizes-display div {
+    width: 30px;
+    height: 30px;
+    border: solid 1px #00000041;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.container .filter .sizes .sizes-display>.checked {
+    border-color: #00c0ee;
+}
+
+.container .clothes-display {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px 30px;
+}
+
+.container .clothes-display .clothes button {
+    width: 100%;
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+    font-weight: 600;
+    border: 0;
+    cursor: pointer;
+    outline: none;
+    transition: 250ms ease-in;
+}
+
+.container .clothes-display .clothes button:hover {
+    background-color: #000000ad;
+}
+
+.container .clothes-display .clothes .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.container .clothes-display .clothes span:nth-child(2) {
+    font-weight: 900;
+}
+
+main #load_more {
+    max-height: 43px;
+    padding: 10px;
+    margin: 60px;
+    background-color: #01fa92;
+    color: #fff;
+    font-weight: 600;
+    border: 0;
+    cursor: pointer;
+    outline: none;
+    transition: 250ms ease-in;
+    font-weight: 900;
+    align-self: center;
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    position: sticky;
+}
+
+.modal {
+    width: 100vw;
+    height: 100vh;
+    background-color: #00000041;
+    position: fixed;
+}
+
+.modal .overlay {
+    width: 100vw;
+    height: 100vh;
+    background-color: #00000041;
+    position: fixed;
+}
+
+.modal .modal-dialog {
+    width: 80%;
+    min-height: 300px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 3px;
+    position: absolute;
+    top: 30%;
+    left: 10%;
+}
+
+.modal .modal-dialog .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 1px #00000041;
+}
+
+.modal .modal-dialog .modal-body {
+    min-height: 150px;
+    margin: 10px 0;
+}
+
+.modal .modal-dialog .modal-body #products {
+    width: 40%;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal .modal-dialog .modal-body #products div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal .modal-dialog .modal-body #products .remove{
+    width: 20px;
+    height: 20px;
+    background-color: #962323;
+    color: #fff;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.modal .modal-dialog .modal-footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.btn {
+    padding: 10px;
+    border: 0;
+    border-radius: 3px;
+    cursor: pointer;
+    outline: none;
+}
+
+.btn-primary {
+    background-color: #000;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #000000b2;
+    color: #fff;
+}
+
+.btn-secondary {
+    background-color: #fff;
+    color: #f00;
+    border: solid 1px #f00;
+}
+
+.btn-secondary:hover {
+    background-color: #f1f1f1;
+    color: #f00;
+    border: solid 1px #f00;
+}
+
+.hidden {
+    display: none !important;
+}

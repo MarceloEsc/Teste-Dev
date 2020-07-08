@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delt</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header>
+        <div class="nav">
+            <h1>D E L T</h1>
+            <i class="fas fa-shopping-bag"></i>
+            <span class="hidden" id="cart_items">1</span>
+        </div>
+    </header>
+
+    <div class="top">
+        <span>Blusas</span>
+        <div class="dropdown">
+            <button class="dropbtn">Ordenar por: <i class="fas fa-angle-down"></i></button>
+            <div class="dropdown-content">
+                <a href="#recent" class="checked">Mais recentes</a>
+                <a href="#biggest">Menor preço</a>
+                <a href="#lowest">Maior preço</a>
+            </div>
+        </div>
+
+    </div>
+
+    <main>
+        <div class="container">
+            <div class="filter">
+                <div class="options colors">
+                    <span class="opt-title">CORES</span>
+                    <div>
+                        <div class="checkbox" id="amarelo"></div>
+                        <span>Amarelo</span>
+                    </div>
+                    <div>
+                        <div class="checkbox" id="azul"></div>
+                        <span>Azul</span>
+                    </div>
+                    <div>
+                        <div class="checkbox" id="branco"></div>
+                        <span>Branco</span>
+                    </div>
+                    <div>
+                        <div class="checkbox" id="cinza"></div>
+                        <span>Cinza</span>
+                    </div>
+                    <div>
+                        <div class="checkbox" id="laranja"></div>
+                        <span>Laranja</span>
+                    </div>
+                    <span id="more_colors">Ver todas as cores <i class="fas fa-angle-down"></i></span>
+                    <div>
+                        <div class="checkbox" id="verde"></div>
+                        <span>Verde</span>
+                    </div>
+                    <div>
+                        <div class="checkbox" id="vermelho"></div>
+                        <span>Vermelho</span>
+                    </div>
+                    <div>
+                        <div class="checkbox" id="preto"></div>
+                        <span>Preto</span>
+                    </div>
+                    <div>
+                        <div class="checkbox" id="rosa"></div>
+                        <span>Rosa</span>
+                    </div>
+                    <div>
+                        <div class="checkbox" id="vinho"></div>
+                        <span>Vinho</span>
+                    </div>
+                </div>
+
+                <div class="options sizes">
+                    <span class="opt-title">TAMANHOS</span>
+                    <div class="sizes-display">
+                        <div id="sizep">P</div>
+                        <div id="sizem">M</div>
+                        <div id="sizeg">G</div>
+                        <div id="sizegg">GG</div>
+                        <div id="sizeu">U</div>
+                        <div id="size36">36</div>
+                        <div id="size38">38</div>
+                        <div id="size40">40</div>
+                        <div id="size42">42</div>
+                        <div id="size44">44</div>
+                        <div id="size46">46</div>
+                    </div>
+                </div>
+
+                <div class="options prices">
+                    <span class="opt-title">Faixa DE PREÇO</span>
+                    <div>
+                        <div class="checkbox" id="price_range1" data-lowprice="0" data-bigprice="51"></div>
+                        <span>de R$0 até R$50</span>
+                    </div>
+                    <div>
+                        <div class="checkbox" id="price_range2" data-lowprice="51" data-bigprice="150"></div>
+                        <span>de R$51 até R$150</span>
+                    </div>
+                    <div>
+                        <div class="checkbox" id="price_range3" data-lowprice="151" data-bigprice="300"></div>
+                        <span>de R$151 até R$300</span>
+                    </div>
+                    <div>
+                        <div class="checkbox" id="price_range4" data-lowprice="301" data-bigprice="500"></div>
+                        <span>de R$301 até R$500</span>
+                    </div>
+                    <div>
+                        <div class="checkbox" id="price_range5" data-lowprice="1" data-bigprice="500"></div>
+                        <span>a partir de R$ 01</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="clothes-display" id="display"></div>
+        </div>
+        <button id="load_more">CARREGAR MAIS</button>
+
+    </main>
+
+    <div class="modal hidden" id="cart">
+        <div class="overlay" onclick="closeModal()"></div>
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Carrinho</h3>
+                </div>
+                <div class="modal-body">
+                    <div id="products">
+                        Seu carrinho está vazio...
+                    </div>
+                    <div>Preço total: R$ <span id="final_price">0</span></div>
+                </div>
+                <div class="modal-footer">
+                    <button onclick="closeModal()" class="btn btn-secondary">Fechar</button>
+                    <button type="button" class="btn btn-primary">Comprar agora</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="cart">
+
+    </div>
+
+    <footer>
+        DELT - E-commerce XYZ
+    </footer>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>

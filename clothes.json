@@ -1,0 +1,118 @@
+{
+    "colors": [
+        "Amarelo",
+        "Azul",
+        "Branco",
+        "Cinza",
+        "Laranja",
+        "Verde",
+        "Vermelho",
+        "Preto",
+        "Vinho"
+    ],
+    "sizes": [
+        "P",
+        "M",
+        "G",
+        "GG",
+        "U",
+        "36",
+        "38",
+        "40",
+        "42",
+        "44",
+        "46"
+    ],
+    "clothes": [
+        {
+            "id": 1,
+            "name": "camiseta mescla",
+            "price": 28.00,
+            "maxTimes": 3,
+            "timesValue": 9.33,
+            "sizes": "p",
+            "colors": "cinza",
+            "image": "camisetamescla.png"
+        },
+        {
+            "id": 2,
+            "name": "saia em couro",
+            "price": 398.00,
+            "maxTimes": 5,
+            "timesValue": 30.00,
+            "sizes": "p",
+            "colors": "vinho",
+            "image": "saiacouro.png"
+        },
+        {
+            "id": 3,
+            "name": "cardigan tigre",
+            "price": 398.00,
+            "maxTimes": 5,
+            "timesValue": 30.00,
+            "sizes": "p",
+            "colors": "cinza",
+            "image": "cardigantigre.png"
+        },
+        {
+            "id": 4,
+            "name": "cardigan off white",
+            "price": 99.90,
+            "maxTimes": 3,
+            "timesValue": 33.00,
+            "sizes": "p",
+            "colors": "cinza",
+            "image": "cardiganoffwhite.png"
+        },
+        {
+            "id": 5,
+            "name": "body leopardo",
+            "price": 129.90,
+            "maxTimes": 3,
+            "timesValue": 43.43,
+            "sizes": "p",
+            "colors": "cinza",
+            "image": "bodyleopardo.png"
+        },
+        {
+            "id": 6,
+            "name": "casaco pelos",
+            "price": 398.00,
+            "maxTimes": 5,
+            "timesValue": 30.00,
+            "sizes": "p",
+            "colors": "cinza",
+            "image": "casacopelos.png"
+        },
+        {
+            "id": 7,
+            "name": "cropped stripes",
+            "price": 120.90,
+            "maxTimes": 3,
+            "timesValue": 40.00,
+            "sizes": "p",
+            "colors": "cinza",
+            "image": "croppedstripes.png"
+        },
+        {
+            "id": 8,
+            "name": "camisa transparente",
+            "price": 398.90,
+            "maxTimes": 5,
+            "timesValue": 30.00,
+            "sizes": "p",
+            "colors": "cinza",
+            "image": "camisatransparente.png"
+        },
+        {
+            "id": 9,
+            "name": "pochete clutch",
+            "price": 99.00,
+            "maxTimes": 3,
+            "timesValue": 33.00,
+            "sizes": "p",
+            "colors": "cinza",
+            "image": "pocheteclutch.png"
+        }
+    ]
+}
