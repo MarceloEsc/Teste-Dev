@@ -55,7 +55,7 @@ main {
     flex-direction: column;
 }
 
-.container, .top, .mobile-filter, .mobile-top, .modal, footer {
+.container, .top, .mobile-filter, .mobile-top, .mobile-order, .modal, footer {
     font-family: 'Noto Sans JP', sans-serif;
 }
 

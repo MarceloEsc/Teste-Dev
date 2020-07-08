@@ -133,7 +133,7 @@ let clothesArr,
     sessionStorageArr = JSON.parse(sessionStorage.getItem('cart')),
     clothesCartArr = sessionStorage.getItem('cart') !== null ? sessionStorageArr : [];
 
-console.log(clothesCartArr);
+// console.log(clothesCartArr);
 
 if (clothesCartArr.length !== 0) {
     cartNumberIcon.classList.remove('hidden');
@@ -159,18 +159,18 @@ const insertClothsIntoDOM = async () => {
             </div>`
         clothesDisplay.append(template);
     })
-    console.log(clothes);
+    // console.log(clothes);
 }
 insertClothsIntoDOM();
 
 // atualiza podutos a partir da filtragem
-const updateClothsIntoDOM = (param, maxparam = null) => {
+const updateClothsIntoDOM = (param = null, maxparam = null) => {
     clothesDisplay.innerHTML = '';
     clothes.map(({ id, name, price, sizes, colors, maxTimes, timesValue, image }) => {
         if (colors === param
             || price >= param && price <= maxparam
-            || 'size' + sizes.toLowerCase() === param) {
-
+            || 'size' + sizes.toLowerCase() === param
+            || param === null) {
             let template = `<div class="clothes">
                     <img src="./images/${image}" alt="${name}" name="${name}">
                     <div class="info">
@@ -240,6 +240,7 @@ const selectFilter = (element, selected) => {
     })
 }
 
+// controles de filtragem
 const loadMore = document.querySelector('#load_more');
 loadMore.onclick = () => insertClothsIntoDOM();
 
@@ -268,12 +269,6 @@ prices.onclick = event => {
     }
 }
 
-const modal = document.querySelector('#cart');
-const closeModal = () => modal.classList.toggle('hidden');
-
-const cart = document.querySelector('.nav i');
-cart.onclick = () => modal.classList.toggle('hidden');
-
 const moreColors = document.querySelector('#more_colors');
 moreColors.onclick = () => {
     document.querySelector('.filter .colors').style.height = 'unset';
@@ -282,3 +277,76 @@ moreColors.onclick = () => {
 
 const resetFilters = document.querySelector('#reset');
 resetFilters.onclick = () => location.reload();
+
+// controles do carrinho
+const modal = document.querySelector('#cart');
+const closeModal = () => modal.classList.toggle('hidden');
+
+const cart = document.querySelector('.nav i');
+cart.onclick = () => modal.classList.toggle('hidden');
+
+// ordena os produtos
+const orderSort = (sort) => {
+    clothesArr = [];
+
+    for (let i = 0; i < clothes.length; i++) {
+        clothesArr.push([clothes[i].id, clothes[i].price])
+    }
+
+    switch (sort) {
+        case 'big':
+            clothesArr.sort((a, b) => {
+                return b[1] - a[1]
+            })
+            updateOrderedClothsIntoDOM()
+            break;
+        case 'low':
+            clothesArr.sort(function (a, b) {
+                return a[1] - b[1]
+            })
+            updateOrderedClothsIntoDOM()
+            break;
+    }
+}
+
+const updateOrderedClothsIntoDOM = () => {
+    clothesDisplay.innerHTML = '';
+
+    let nameArr = []
+    clothesArr.map((newClothes) => {
+        clothes.some(({ id, name, price, maxTimes, timesValue, image }) => {
+            if (nameArr.find(element => element == name)) return
+
+            if (newClothes[1] === price) {
+                nameArr.push(name)
+                let template = `<div class="clothes">
+                    <img src="./images/${image}" alt="${name}" name="${name}">
+                    <div class="info">
+                        <span>${name.toUpperCase()}</span>
+                        <span>R$ ${price.toFixed(2).toString().replace(".", ",")}</span>
+                        <span>até ${maxTimes}x de R$${timesValue.toFixed(2).toString().replace(".", ",")}</span>
+                     
+                    </div>
+                    <button onclick="addToCart(${id})">COMPRAR</button>
+                </div>`
+
+                clothesDisplay.innerHTML += template;
+            }
+        })
+    })
+}
+
+const orderControls = document.querySelectorAll('.dropdown-content');
+orderControls.forEach(control => control.onclick = event => {
+    switch (event.target.id) {
+        case 'order_recent':
+            updateClothsIntoDOM();
+            break;
+        case 'order_biggest':
+            orderSort('big');
+            break;
+        case 'order_lowest':
+            orderSort('low');
+            break;
+    }
+})
