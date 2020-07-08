@@ -165,8 +165,8 @@ main {
     cursor: pointer;
 }
 
-.container .filter #reset {
-    margin-top: 30px;
+.container .filter #reset, #mobile_reset {
+    margin: 30px 0;
     margin-left: 10px;
     background-color: #fff;
     border: solid 1px #00000041;

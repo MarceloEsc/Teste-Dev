@@ -100,6 +100,9 @@ const initMobile = () => {
         document.querySelector('.mobile-order').style.display = 'block';
         document.querySelector('body').style.overflow = 'hidden';
     }
+
+    const mobileResetFilters = document.querySelector('#mobile_reset');
+    mobileResetFilters.onclick = () => location.reload();
 }
 
 // insere a estilização móvel se o dispositivo for móvel
