@@ -23,9 +23,9 @@
         <div class="dropdown">
             <button class="dropbtn">Ordenar por: <i class="fas fa-angle-down"></i></button>
             <div class="dropdown-content">
-                <a href="#recent" class="checked">Mais recentes</a>
-                <a href="#biggest">Menor preço</a>
-                <a href="#lowest">Maior preço</a>
+                <a href="#recent" id="order_recent" class="checked">Mais recentes</a>
+                <a href="#biggest" id="order_biggest">Menor preço</a>
+                <a href="#lowest" id="order_lowest">Maior preço</a>
             </div>
         </div>
     </div>
@@ -144,9 +144,9 @@
             <span id="close_orders">&#10005;</span>
         </div>
         <div>
-            <a href="#recent" class="checked">Mais recentes</a>
-            <a href="#biggest">Menor preço</a>
-            <a href="#lowest">Maior preço</a>
+            <a href="#recent" id="order_recent" class="checked">Mais recentes</a>
+            <a href="#biggest" id="order_biggest">Menor preço</a>
+            <a href="#lowest" id="order_lowest">Maior preço</a>
         </div>
     </div>
 
@@ -238,8 +238,9 @@
                         <span>a partir de R$ 01</span>
                     </div>
                 </div>
-            </div>
 
+                <button class="btn" id="reset">Resetar Filtros</button>
+            </div>
 
             <div class="clothes-display" id="display"></div>
         </div>

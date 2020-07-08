@@ -41,7 +41,7 @@
             "maxTimes": 5,
             "timesValue": 30.00,
             "sizes": "p",
-            "colors": "vinho",
+            "colors": "preto",
             "image": "saiacouro.png"
         },
         {
@@ -51,7 +51,7 @@
             "maxTimes": 5,
             "timesValue": 30.00,
             "sizes": "p",
-            "colors": "cinza",
+            "colors": "laranja",
             "image": "cardigantigre.png"
         },
         {
@@ -61,7 +61,7 @@
             "maxTimes": 3,
             "timesValue": 33.00,
             "sizes": "p",
-            "colors": "cinza",
+            "colors": "branco",
             "image": "cardiganoffwhite.png"
         },
         {
@@ -71,7 +71,7 @@
             "maxTimes": 3,
             "timesValue": 43.43,
             "sizes": "p",
-            "colors": "cinza",
+            "colors": "amarelo",
             "image": "bodyleopardo.png"
         },
         {
@@ -81,7 +81,7 @@
             "maxTimes": 5,
             "timesValue": 30.00,
             "sizes": "p",
-            "colors": "cinza",
+            "colors": "rosa",
             "image": "casacopelos.png"
         },
         {
@@ -91,7 +91,7 @@
             "maxTimes": 3,
             "timesValue": 40.00,
             "sizes": "p",
-            "colors": "cinza",
+            "colors": "verde",
             "image": "croppedstripes.png"
         },
         {
@@ -101,7 +101,7 @@
             "maxTimes": 5,
             "timesValue": 30.00,
             "sizes": "p",
-            "colors": "cinza",
+            "colors": "preto",
             "image": "camisatransparente.png"
         },
         {
@@ -111,7 +111,7 @@
             "maxTimes": 3,
             "timesValue": 33.00,
             "sizes": "p",
-            "colors": "cinza",
+            "colors": "preto",
             "image": "pocheteclutch.png"
         }
     ]
