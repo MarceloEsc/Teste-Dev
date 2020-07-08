@@ -28,7 +28,126 @@
                 <a href="#lowest">Maior preço</a>
             </div>
         </div>
+    </div>
 
+    <div class="mobile-top">
+        <span>Blusas</span>
+        <div class="btns">
+            <button class="btn" id="filter_btn">Filtrar</button>
+            <button class="btn" id="order_btn">Ordenar</button>
+        </div>
+    </div>
+
+    <div class="mobile-filter">
+        <div class="filter-title">
+            <span>FILTRAR</span>
+            <span id="close_filters">&#10005;</span>
+        </div>
+        <div class="options colors">
+            <div class="filter-opt-title" id="expand_colors">
+                <span>CORES</span>
+                <span>+</span>
+            </div>
+            <div>
+                <div class="checkbox" id="amarelo"></div>
+                <span>Amarelo</span>
+            </div>
+            <div>
+                <div class="checkbox" id="azul"></div>
+                <span>Azul</span>
+            </div>
+            <div>
+                <div class="checkbox" id="branco"></div>
+                <span>Branco</span>
+            </div>
+            <div>
+                <div class="checkbox" id="cinza"></div>
+                <span>Cinza</span>
+            </div>
+            <div>
+                <div class="checkbox" id="laranja"></div>
+                <span>Laranja</span>
+            </div>
+            <div>
+                <div class="checkbox" id="verde"></div>
+                <span>Verde</span>
+            </div>
+            <div>
+                <div class="checkbox" id="vermelho"></div>
+                <span>Vermelho</span>
+            </div>
+            <div>
+                <div class="checkbox" id="preto"></div>
+                <span>Preto</span>
+            </div>
+            <div>
+                <div class="checkbox" id="rosa"></div>
+                <span>Rosa</span>
+            </div>
+            <div>
+                <div class="checkbox" id="vinho"></div>
+                <span>Vinho</span>
+            </div>
+        </div>
+
+        <div class="options sizes">
+            <div class="filter-opt-title" id="expand_sizes">
+                <span>TAMANHOS</span>
+                <span>+</span>
+            </div>
+            <div class="sizes-display">
+                <div id="sizep">P</div>
+                <div id="sizem">M</div>
+                <div id="sizeg">G</div>
+                <div id="sizegg">GG</div>
+                <div id="sizeu">U</div>
+                <div id="size36">36</div>
+                <div id="size38">38</div>
+                <div id="size40">40</div>
+                <div id="size42">42</div>
+                <div id="size44">44</div>
+                <div id="size46">46</div>
+            </div>
+        </div>
+
+        <div class="options prices">
+            <div class="filter-opt-title" id="expand_prices">
+                <span>FAIXA DE PREÇO</span>
+                <span>+</span>
+            </div>
+            <div>
+                <div class="checkbox" id="price_range1" data-lowprice="0" data-bigprice="51"></div>
+                <span>de R$0 até R$50</span>
+            </div>
+            <div>
+                <div class="checkbox" id="price_range2" data-lowprice="51" data-bigprice="150"></div>
+                <span>de R$51 até R$150</span>
+            </div>
+            <div>
+                <div class="checkbox" id="price_range3" data-lowprice="151" data-bigprice="300"></div>
+                <span>de R$151 até R$300</span>
+            </div>
+            <div>
+                <div class="checkbox" id="price_range4" data-lowprice="301" data-bigprice="500"></div>
+                <span>de R$301 até R$500</span>
+            </div>
+            <div>
+                <div class="checkbox" id="price_range5" data-lowprice="1" data-bigprice="500"></div>
+                <span>a partir de R$ 01</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="mobile-order">
+        <div class="order-title">
+            <span>ORDER</span>
+            <span id="close_orders">&#10005;</span>
+        </div>
+        <div>
+            <a href="#recent" class="checked">Mais recentes</a>
+            <a href="#biggest">Menor preço</a>
+            <a href="#lowest">Maior preço</a>
+        </div>
     </div>
 
     <main>
@@ -121,10 +240,10 @@
                 </div>
             </div>
 
+
             <div class="clothes-display" id="display"></div>
         </div>
         <button id="load_more">CARREGAR MAIS</button>
-
     </main>
 
     <div class="modal hidden" id="cart">

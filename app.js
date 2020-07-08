@@ -198,3 +198,59 @@ moreColors.onclick = () => {
     document.querySelector('.colors').style.height = 'unset'
     moreColors.style.display = 'none'
 }
+
+const expandColor = document.querySelector('#expand_colors')
+let isColorExpanded = false
+expandColor.onclick = () => {
+    if (!isColorExpanded) {
+        document.querySelector('.colors').style.height = 'unset'
+        isColorExpanded = true
+    } else {
+        document.querySelector('.colors').style.height = '30px'
+        isColorExpanded = false
+    }
+}
+
+const expandSize = document.querySelector('#expand_sizes')
+let isSizeExpanded = false
+expandSize.onclick = () => {
+    if (!isSizeExpanded) {
+        document.querySelector('.sizes').style.height = 'unset'
+        isSizeExpanded = true
+    } else {
+        document.querySelector('.sizes').style.height = '30px'
+        isSizeExpanded = false
+    }
+}
+
+const expandPrice = document.querySelector('#expand_prices')
+let isPriceExpanded = false
+expandPrice.onclick = () => {
+    if (!isPriceExpanded) {
+        document.querySelector('.prices').style.height = 'unset'
+        isPriceExpanded = true
+    } else {
+        document.querySelector('.prices').style.height = '30px'
+        isPriceExpanded = false
+    }
+}
+
+const closeFilter = document.querySelector('#close_filters')
+closeFilter.onclick = () => {
+    document.querySelector('.mobile-filter').style.display = 'none'
+}
+
+const openFilter = document.querySelector('#filter_btn')
+openFilter.onclick = () => {
+    document.querySelector('.mobile-filter').style.display = 'block'
+}
+
+const closeOrder = document.querySelector('#close_orders')
+closeOrder.onclick = () => {
+    document.querySelector('.mobile-order').style.display = 'none'
+}
+
+const openOrder = document.querySelector('#order_btn')
+openOrder.onclick = () => {
+    document.querySelector('.mobile-order').style.display = 'block'
+}

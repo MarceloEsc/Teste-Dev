@@ -55,7 +55,7 @@ main {
     flex-direction: column;
 }
 
-.container, .top, .modal, footer {
+.container, .top, .mobile-filter, .mobile-top, .modal, footer {
     font-family: 'Noto Sans JP', sans-serif;
 }
 
@@ -118,6 +118,10 @@ main {
     background-color: #01fa92 !important;
 }
 
+.mobile-top {
+    display: none;
+}
+
 .container {
     width: 80%;
     align-self: center;
@@ -125,26 +129,27 @@ main {
     grid-template-columns: 180px auto;
 }
 
+.mobile-filter {
+    display: none;
+}
+
 .container .filter .options:nth-child(2) {
     margin: 40px 0;
 }
 
-.container .filter .options .opt-title {
-    margin-bottom: 50px; /*não funciona*/
-}
-.container .filter .options .checkbox {
+.options .checkbox {
     width: 13px;
     height: 13px;
     border: solid 1px #000;
     margin-right: 5px;
 }
-.container .filter .colors .checked, 
-.container .filter .prices .checked {
+.colors .checked, 
+.prices .checked {
     padding: 3px;
     background-color: #01fa92;
 }
 
-.container .filter .options>div {
+.options>div {
     display: flex;
     align-items: center;
 }
@@ -160,12 +165,12 @@ main {
     cursor: pointer;
 }
 
-.container .filter .sizes .sizes-display {
+.sizes .sizes-display {
     display: grid;
     grid-template-columns: repeat(4, 40px);
     row-gap: 10px;
 }
-.container .filter .sizes .sizes-display div {
+.sizes .sizes-display div {
     width: 30px;
     height: 30px;
     border: solid 1px #00000041;
@@ -175,7 +180,7 @@ main {
     cursor: pointer;
 }
 
-.container .filter .sizes .sizes-display>.checked {
+.sizes .sizes-display>.checked {
     border-color: #00c0ee;
 }
 
@@ -183,6 +188,10 @@ main {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px 30px;
+}
+
+.container .clothes-display .clothes {
+    position: relative;
 }
 
 .container .clothes-display .clothes button {
@@ -195,10 +204,17 @@ main {
     cursor: pointer;
     outline: none;
     transition: 250ms ease-in;
+    position: relative;
+    bottom: 0;
 }
+
 
 .container .clothes-display .clothes button:hover {
     background-color: #000000ad;
+}
+
+.container .clothes-display .clothes img {
+    width: 100%;
 }
 
 .container .clothes-display .clothes .info {
