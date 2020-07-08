@@ -30,7 +30,7 @@
             "price": 28.00,
             "maxTimes": 3,
             "timesValue": 9.33,
-            "sizes": "p",
+            "sizes": "gg",
             "colors": "cinza",
             "image": "camisetamescla.png"
         },
@@ -40,7 +40,7 @@
             "price": 398.00,
             "maxTimes": 5,
             "timesValue": 30.00,
-            "sizes": "p",
+            "sizes": "36",
             "colors": "preto",
             "image": "saiacouro.png"
         },
@@ -50,7 +50,7 @@
             "price": 398.00,
             "maxTimes": 5,
             "timesValue": 30.00,
-            "sizes": "p",
+            "sizes": "m",
             "colors": "laranja",
             "image": "cardigantigre.png"
         },
@@ -60,7 +60,7 @@
             "price": 99.90,
             "maxTimes": 3,
             "timesValue": 33.00,
-            "sizes": "p",
+            "sizes": "g",
             "colors": "branco",
             "image": "cardiganoffwhite.png"
         },
@@ -80,7 +80,7 @@
             "price": 398.00,
             "maxTimes": 5,
             "timesValue": 30.00,
-            "sizes": "p",
+            "sizes": "m",
             "colors": "rosa",
             "image": "casacopelos.png"
         },
@@ -90,7 +90,7 @@
             "price": 120.90,
             "maxTimes": 3,
             "timesValue": 40.00,
-            "sizes": "p",
+            "sizes": "m",
             "colors": "verde",
             "image": "croppedstripes.png"
         },
@@ -100,7 +100,7 @@
             "price": 398.90,
             "maxTimes": 5,
             "timesValue": 30.00,
-            "sizes": "p",
+            "sizes": "g",
             "colors": "preto",
             "image": "camisatransparente.png"
         },
@@ -110,7 +110,7 @@
             "price": 99.00,
             "maxTimes": 3,
             "timesValue": 33.00,
-            "sizes": "p",
+            "sizes": "38",
             "colors": "preto",
             "image": "pocheteclutch.png"
         }
