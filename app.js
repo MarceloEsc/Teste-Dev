@@ -23,9 +23,10 @@ const initMobile = () => {
             updateClothsIntoDOM(event.target.id);
         }
     }
-    const sizes = document.querySelector('.sizes');
+    const sizes = document.querySelector('.mobile-filter .sizes');
     sizes.onclick = event => {
-        if (event.target.tagName === 'DIV') {
+        if (event.target.tagName === 'DIV'
+            && event.target.parentNode.classList.contains('sizes-display')) {
             selectFilter('.sizes div', event.target);
             updateClothsIntoDOM(event.target.id);
         }
@@ -102,8 +103,8 @@ const initMobile = () => {
 }
 
 // insere a estilização móvel se o dispositivo for móvel
+const device = getDeviceType();
 const insertMobileStyle = () => {
-    const device = getDeviceType();
     console.log(device);
 
     if (device == 'tablet' || device == 'mobile') {
@@ -169,6 +170,8 @@ insertClothsIntoDOM();
 
 // atualiza podutos a partir da filtragem
 const updateClothsIntoDOM = (param = null, maxparam = null) => {
+    console.log(121);
+
     clothesDisplay.innerHTML = '';
     clothes.map(({ id, name, price, sizes, colors, maxTimes, timesValue, image }) => {
         if (colors === param
