@@ -79,21 +79,25 @@ const initMobile = () => {
     const closeFilter = document.querySelector('#close_filters');
     closeFilter.onclick = () => {
         document.querySelector('.mobile-filter').style.display = 'none';
+        document.querySelector('body').style.overflow = 'unset';
     }
 
     const openFilter = document.querySelector('#filter_btn');
     openFilter.onclick = () => {
         document.querySelector('.mobile-filter').style.display = 'block';
+        document.querySelector('body').style.overflow = 'hidden';
     }
 
     const closeOrder = document.querySelector('#close_orders');
     closeOrder.onclick = () => {
         document.querySelector('.mobile-order').style.display = 'none';
+        document.querySelector('body').style.overflow = 'unset';
     }
 
     const openOrder = document.querySelector('#order_btn');
     openOrder.onclick = () => {
         document.querySelector('.mobile-order').style.display = 'block';
+        document.querySelector('body').style.overflow = 'hidden';
     }
 }
 

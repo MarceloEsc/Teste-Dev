@@ -3,6 +3,10 @@ body {
     /* overflow: hidden; */ /* ativar para display de filtros */
 }
 
+header .nav {
+    width: 90%;
+}
+
 .top {
     display: none;
 }
